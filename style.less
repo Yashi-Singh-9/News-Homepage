@@ -1,0 +1,232 @@
+@soft-orange: hsl(35, 77%, 62%);
+@soft-red: hsl(5, 85%, 63%);
+@off-white: hsl(36, 100%, 99%);
+@grayish-blue: hsl(233, 8%, 79%);
+@dark-grayish-blue: hsl(236, 13%, 42%);
+@very-dark-blue: hsl(240, 100%, 5%);
+@font-path: "assets/fonts/static";
+
+@font-face {
+  font-family: 'Inter';
+  src: url("@{font-path}/Inter-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url("@{font-path}/Inter-ExtraBold.ttf") format("truetype");
+  font-weight: 800; // ExtraBold is often 800
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url("@{font-path}/Inter-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Inter', sans-serif !important;
+  font-weight: normal;
+  font-size: 1rem;
+  background-color: @off-white;
+}
+
+header{
+  padding: 4rem 10rem;
+
+  @media (max-width: 1200px) {
+    padding: 4rem 6rem;
+  }
+
+  @media (max-width: 1064px) {
+    padding: 4rem 3rem;
+  }
+
+  nav{
+    .menu-toggle{
+      display: none;
+      cursor: pointer;
+
+      @media (max-width: 890px) {
+        display: block; // This ensures it's visible on smaller screens
+      }
+    }
+
+    ul{
+      margin: 0 auto;
+      display: flex;
+      gap: 40px;
+
+      @media (max-width: 890px) {
+        display: none; // Hides the menu by default
+    
+        &.mobile.active {
+          display: flex;
+          flex-direction: column;
+          gap: 1rem;
+          position: absolute;
+          top: 8rem;
+          padding: 2rem;
+          background-color: @very-dark-blue;
+          right: 3rem;
+          width: 90%;
+          height: auto;
+        }
+      }
+
+      li{
+        a{
+          cursor: pointer;
+          color: @dark-grayish-blue;
+          transition: 0.2s ease;
+
+          &:hover{
+            color: @very-dark-blue;
+            font-weight: bold;
+          }
+        }
+      }
+    }
+  }
+}
+
+main{
+  padding: 0 10rem;
+
+  @media (max-width: 1200px) {
+    padding: 0 6rem;
+  }
+
+  @media (max-width: 1064px) {
+    padding: 0 3rem;
+  }
+
+  .mains{
+    @media (max-width: 890px) {
+      padding: 1rem;
+      flex-direction: column;
+    }
+
+    .left-container{
+      .container{
+        @media (max-width: 890px) {
+          flex-direction: column;
+        }
+
+        .title{
+          font-size: 3.5rem;
+          font-weight: 800;
+          color: @very-dark-blue;
+        }
+
+        .sub-container{
+          .description{
+            color: @dark-grayish-blue;
+            margin-left: 9rem;
+
+            @media (max-width: 890px) {
+              margin-left: unset;
+            }
+          }
+
+          .btn{
+            margin-left: 9rem;
+            background-color: @soft-red;
+            padding: 1rem 1.5rem;
+            color: @very-dark-blue;
+            font-weight: bold;
+            font-size: 1.2rem;
+            letter-spacing: 10px;
+            transition: 0.3s ease;
+
+            @media (max-width:890px) {
+              margin-left: unset;
+            }
+
+            &:hover{
+              background-color: lighten(@soft-red, 10%);
+            }
+          }
+        }
+      }
+    }
+
+    .right-container{
+      background-color: @very-dark-blue;
+      height: fit-content;
+
+      h2{
+        color: @soft-orange;
+        font-weight: bold;
+        font-size: 2.5rem;
+      }
+
+      .news{
+        h5{
+          color: @off-white;
+          font-weight: bold;
+        }
+
+        .news-title{
+          color: lighten(@dark-grayish-blue, 20%);
+        }
+      }
+
+      hr{
+        color: @grayish-blue;
+      }
+    }
+  }  
+
+  .last-section {
+    @media (max-width: 890px) {
+      flex-direction: column;
+    }
+
+    .infos{
+      img{
+        flex: 1;
+        height: 60%;
+
+        @media (max-width: 890px) {
+          margin-bottom: 4rem;
+        }
+      }
+
+      .info{
+        h2{
+          font-weight: bold;
+          color: @soft-red !important;
+        }
+
+        .title{
+          color: @very-dark-blue;
+          font-weight: bold;
+          font-size: 1.08rem;
+        }
+
+        .description{
+          color: @dark-grayish-blue;
+        }
+      }
+    }
+  }
+}
+
+footer{
+  color: @very-dark-blue;
+
+  a,
+  a:visited{
+    color: @soft-red;
+  }
+}
