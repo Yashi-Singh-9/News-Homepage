@@ -35,7 +35,7 @@ Users should be able to:
 
 #### Desktop View:
 
-![Desktop Screenshot](design/desktop-desktop.png)  
+![Desktop Screenshot](design/desktop-design.png)  
 
 #### Mobile View:
 
@@ -43,8 +43,8 @@ Users should be able to:
 
 ### Links
 
-- **Solution URL:** [Frontend Mentor Solution](https://www.frontendmentor.io/solutions)  
-- **Live Site URL:** [Live Demo](https://your-live-site-url.com)
+- **Solution URL:** [Frontend Mentor Solution](https://www.frontendmentor.io/solutions/news-homepage-_wHsEUurWK)  
+- **Live Site URL:** [Live Demo](https://yashi-singh-9.github.io/News-Homepage/)
 
 ---
 
