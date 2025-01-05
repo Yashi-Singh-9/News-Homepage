@@ -67,6 +67,7 @@ header nav ul {
     padding: 2rem;
     background-color: hsl(240, 100%, 5%);
     right: 3rem;
+    left: 1.5rem;
     width: 90%;
     height: auto;
   }
@@ -77,7 +78,7 @@ header nav ul li a {
   transition: 0.2s ease;
 }
 header nav ul li a:hover {
-  color: hsl(240, 100%, 5%);
+  color: hsl(236, 13%, 62%);
   font-weight: bold;
 }
 main {
@@ -95,7 +96,7 @@ main {
 }
 @media (max-width: 890px) {
   main .mains {
-    padding: 1rem;
+    padding: 0;
     flex-direction: column;
   }
 }
@@ -167,6 +168,7 @@ main .last-section .infos img {
 @media (max-width: 890px) {
   main .last-section .infos img {
     margin-bottom: 4rem;
+    flex: 0;
   }
 }
 main .last-section .infos .info h2 {

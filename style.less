@@ -78,6 +78,7 @@ header{
           padding: 2rem;
           background-color: @very-dark-blue;
           right: 3rem;
+          left: 1.5rem;
           width: 90%;
           height: auto;
         }
@@ -90,7 +91,7 @@ header{
           transition: 0.2s ease;
 
           &:hover{
-            color: @very-dark-blue;
+            color: lighten(@dark-grayish-blue, 20%);
             font-weight: bold;
           }
         }
@@ -111,8 +112,8 @@ main{
   }
 
   .mains{
-    @media (max-width: 890px) {
-      padding: 1rem;
+    @media (max-width: 890px) {      
+      padding: 0;
       flex-direction: column;
     }
 
@@ -199,6 +200,7 @@ main{
 
         @media (max-width: 890px) {
           margin-bottom: 4rem;
+          flex: 0;          
         }
       }
 
